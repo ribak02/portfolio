@@ -49,7 +49,7 @@ export const projectsData = [
     description: `Created a full-stack web application enabling puzzle-solving for 500+ users across 10 federated platforms. Integrated OAuth2 for federated puzzle access, improving user authentication security.`,
     dates: 'Sep 2022 - May 2023',
     tags: ['VueJs', 'OAuth', 'Scrum', 'Agile'],
-    image: '/images/project-covers/sudoku.png',
+    image: '/images/project-covers/sudoku.PNG',
   },
   {
     title: 'Secure Reddit',
@@ -63,6 +63,6 @@ export const projectsData = [
     description: `Blockchain society official website, showcasing events, resources, and membership information. Developed with React, TailwindCSS. Led a team of 5+ to develop a React web app`,
     dates: 'Sep 2023 - Mar 2024',
     tags: ['React', 'Team Lead', 'Agile'],
-    image: '/images/project-covers/ustablockchain.png',
+    image: '/images/project-covers/ustablockchain.PNG',
   },
 ];
