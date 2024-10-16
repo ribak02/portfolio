@@ -91,9 +91,9 @@ export default function Home() {
                 Check out my latest work
               </h2>
               <p className='text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed'>
-                I've worked on a variety of projects, from complex fullstack web
-                applications to AI learning algorithms. Here are a few of my
-                favorites.
+                I&apos;ve worked on a variety of projects, from complex
+                fullstack web applications to AI learning algorithms. Here are a
+                few of my favorites.
               </p>
             </div>
           </div>
