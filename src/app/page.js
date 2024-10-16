@@ -1,4 +1,4 @@
-import Hero from '@/components/Hero';
+import Hero from '@/components/hero.jsx';
 import { tech_stack_path, tech_stack } from '../lib/constants';
 import { aboutText } from '@/lib/constants';
 
@@ -9,7 +9,7 @@ import { cn } from '@/lib/utils';
 import Marquee from '@/components/ui/marquee';
 import { projectsData } from '@/lib/constants';
 
-import ProjectCard from '@/components/ProjectCard';
+import ProjectCard from '@/components/project-card';
 
 export default function Home() {
   const images = tech_stack.map((img) => tech_stack_path + img);
@@ -113,6 +113,7 @@ export default function Home() {
             </BlurFade>
           ))}
         </div>
+        <div className='mb-4'></div>
       </section>
     </main>
   );

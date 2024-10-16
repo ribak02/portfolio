@@ -13,7 +13,7 @@ const getTargetCharacter = (word, index) => {
   return index < word.length ? word[index] : ' ';
 };
 
-const Solari = ({
+const SolariBoard = ({
   words,
   textColor = 'text-black',
   bgColor = 'bg-gray-200',
@@ -148,4 +148,4 @@ const Solari = ({
   );
 };
 
-export default Solari;
+export default SolariBoard;

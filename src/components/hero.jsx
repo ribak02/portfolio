@@ -1,4 +1,4 @@
-import SolariBoard from './SolariBoard';
+import SolariBoard from './solari-board';
 
 const Hero = () => {
   return (
