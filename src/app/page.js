@@ -10,6 +10,7 @@ import Marquee from '@/components/ui/marquee';
 import { projectsData } from '@/lib/constants';
 
 import ProjectCard from '@/components/project-card';
+import FadeIn from '@/components/fade-in';
 
 export default function Home() {
   const images = tech_stack.map((img) => tech_stack_path + img);
@@ -29,11 +30,14 @@ export default function Home() {
           'inset-x-0 inset-y-[-30%] h-[200%] skew-y-12',
         )}
       />
-      <Hero />
+
+      <BlurFade delay={BLUR_FADE_DELAY}>
+        <Hero />
+      </BlurFade>
 
       <section id='about' className='flex flex-row gap-3 md:gap-6'>
         <BlurFade
-          delay={BLUR_FADE_DELAY}
+          delay={BLUR_FADE_DELAY * 2}
           className='flex items-center justify-center'
         >
           <div className='rounded-md text-base md:leading-8'>
@@ -46,10 +50,13 @@ export default function Home() {
           </div>
         </BlurFade>
         <BlurFade
-          delay={BLUR_FADE_DELAY}
+          delay={BLUR_FADE_DELAY * 2}
           className='flex items-center justify-center'
         >
-          <div className='flex items-center justify-center rounded-md bg-gray-200 bg-opacity-50'>
+          <div
+            id='image'
+            className='flex items-center justify-center rounded-md bg-gray-200 bg-opacity-50'
+          >
             <Image
               className='h-full w-full rounded-md'
               src={'/images/profile-kabir.png'}
@@ -61,7 +68,7 @@ export default function Home() {
         </BlurFade>
       </section>
 
-      <BlurFade delay={BLUR_FADE_DELAY * 2}>
+      <BlurFade delay={BLUR_FADE_DELAY * 3}>
         <Marquee pauseOnHover={true}>
           {images.map((src, index) => (
             <div
@@ -81,7 +88,7 @@ export default function Home() {
       </BlurFade>
 
       <section id='work' className='w-full space-y-8 py-8'>
-        <BlurFade delay={BLUR_FADE_DELAY * 3}>
+        <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className='flex flex-col items-center justify-center space-y-8 text-center'>
             <div className='space-y-2'>
               <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-base text-background'>
@@ -101,20 +108,24 @@ export default function Home() {
 
         <div className='mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2'>
           {projects.map((project, id) => (
-            <BlurFade key={id} delay={BLUR_FADE_DELAY * 4 + id * 0.05}>
-              <ProjectCard
-                key={id}
-                title={project.title}
-                description={project.description}
-                dates={project.dates}
-                tags={project.tags}
-                image={project.image}
-              />
-            </BlurFade>
+            <ProjectCard
+              key={id}
+              title={project.title}
+              description={project.description}
+              dates={project.dates}
+              tags={project.tags}
+              image={project.image}
+            />
           ))}
         </div>
         <div className='mb-4'></div>
       </section>
     </main>
   );
+}
+{
+  /* <BlurFade key={id} delay={BLUR_FADE_DELAY * 5 + id * 0.05}> */
+}
+{
+  /* </BlurFade> */
 }
