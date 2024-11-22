@@ -1,16 +1,14 @@
 import Hero from '@/components/hero.jsx';
-import { tech_stack_path, tech_stack } from '../lib/constants';
-import { aboutText } from '@/lib/constants';
+import { tech_stack_path, tech_stack } from '../data/constants';
+import { aboutText } from '@/data/constants';
 
 import BlurFade from '@/components/ui/blur-fade';
 import Image from 'next/image';
 import AnimatedGridPattern from '@/components/ui/animated-grid-pattern';
 import { cn } from '@/lib/utils';
 import Marquee from '@/components/ui/marquee';
-import { projectsData } from '@/lib/constants';
-
+import { projectsData } from '@/data/constants';
 import ProjectCard from '@/components/project-card';
-import FadeIn from '@/components/fade-in';
 
 export default function Home() {
   const images = tech_stack.map((img) => tech_stack_path + img);
@@ -91,7 +89,7 @@ export default function Home() {
         <BlurFade delay={BLUR_FADE_DELAY * 4}>
           <div className='flex flex-col items-center justify-center space-y-8 text-center'>
             <div className='space-y-2'>
-              <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-base text-background'>
+              <div className='inline-block rounded-lg bg-foreground px-3 py-1 text-lg text-background'>
                 My Projects
               </div>
               <h2 className='text-3xl font-bold tracking-tighter sm:text-5xl'>
@@ -108,24 +106,21 @@ export default function Home() {
 
         <div className='mx-auto grid max-w-[800px] grid-cols-1 gap-3 sm:grid-cols-2'>
           {projects.map((project, id) => (
-            <ProjectCard
-              key={id}
-              title={project.title}
-              description={project.description}
-              dates={project.dates}
-              tags={project.tags}
-              image={project.image}
-            />
+            <BlurFade key={id} delay={BLUR_FADE_DELAY * 5 + id * 0.05}>
+              <ProjectCard
+                key={id}
+                title={project.title}
+                description={project.description}
+                dates={project.dates}
+                tags={project.tags}
+                image={project.image}
+                links={project.links}
+              />
+            </BlurFade>
           ))}
         </div>
         <div className='mb-4'></div>
       </section>
     </main>
   );
-}
-{
-  /* <BlurFade key={id} delay={BLUR_FADE_DELAY * 5 + id * 0.05}> */
-}
-{
-  /* </BlurFade> */
 }

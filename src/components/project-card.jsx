@@ -7,8 +7,9 @@ import {
   CardTitle,
 } from '@/components/ui/card';
 import Image from 'next/image';
+import Link from 'next/link';
 
-const ProjectCard = ({ title, description, dates, tags, image }) => {
+const ProjectCard = ({ title, description, dates, tags, image, links }) => {
   return (
     <Card
       className={
@@ -46,6 +47,20 @@ const ProjectCard = ({ title, description, dates, tags, image }) => {
           </div>
         )}
       </CardContent>
+      <CardFooter className='px-2 pb-2'>
+        {links && links.length > 0 && (
+          <div className='flex flex-row flex-wrap items-start gap-1'>
+            {links?.map((link, idx) => (
+              <Link href={link?.href} key={idx} target='_blank'>
+                <Badge key={idx} className='flex gap-2 px-2 py-1 text-[10px]'>
+                  {link.icon}
+                  {link.type}
+                </Badge>
+              </Link>
+            ))}
+          </div>
+        )}
+      </CardFooter>
     </Card>
   );
 };

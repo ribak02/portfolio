@@ -1,3 +1,5 @@
+import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
+
 export const tech_stack_path = '/images/tech-stacks/';
 
 export const tech_stack = [
@@ -29,6 +31,34 @@ export const projectsData = [
     dates: 'Sep 2023 - Mar 2024',
     tags: ['Solidity', 'NextJS', 'HardHat', 'Ethereum'],
     image: '/images/project-covers/muzart.jpg',
+    links: [
+      {
+        type: 'Source',
+        href: 'https://github.com/ribak02/muzart',
+        icon: <GitHubLogoIcon className='size-3' />,
+      },
+    ],
+  },
+  {
+    title: 'ML Model Evaluation: Faulty Water Pumps Prediction',
+    description: `Predicts which water pumps are faulty to promote access to clean, potable water across Tanzania. Evaluated multiple machine learning models on the dataset, achieving a 15% accuracy improvement through hyperparameter optimization. Developed a custom preprocessing pipeline to enhance data processing efficiency by 20% and improve model performance. Applied advanced hyperparameter tuning techniques to RandomForest, Logistic Regression, and Gradient Boosting models, resulting in up to a 10% improvement in generalization accuracy.`,
+    dates: 'Sep 2023 - Mar 2024',
+    tags: [
+      'Machine Learning',
+      'Hyperparam Optimization',
+      'Data Preprocessing',
+      'Python',
+      'Scikit-Learn',
+      'Optuna',
+    ],
+    image: '/images/project-covers/ml-model.webp',
+    links: [
+      {
+        type: 'Source',
+        href: 'https://github.com/ribak02/ML-Model-Evaluations',
+        icon: <GitHubLogoIcon className='size-3' />,
+      },
+    ],
   },
   {
     title: 'AI Fuel Efficiency Comparator Tool',
@@ -36,6 +66,7 @@ export const projectsData = [
     dates: 'Jun 2023 - Sep 2023',
     tags: ['React', 'FullStack', 'AI', 'Agile'],
     image: '/images/project-covers/fuelefficiency.webp',
+    links: [],
   },
   {
     title: 'Migration Scotland - Large Census Manipulation ',
@@ -43,6 +74,13 @@ export const projectsData = [
     dates: 'Sep 2021 - Dec 2021',
     tags: ['Python', 'Pandas', 'MatplotLib', 'Data Manipulation'],
     image: '/images/project-covers/migration-scotland.webp',
+    links: [
+      {
+        type: 'Source',
+        href: 'https://github.com/magicuidesign/magicui',
+        icon: <GitHubLogoIcon className='size-3' />,
+      },
+    ],
   },
   {
     title: 'Federation Sudoku App',
@@ -57,6 +95,13 @@ export const projectsData = [
     dates: 'Sep 2023 - Jun 2024',
     tags: ['NodeJs', 'Encryption', 'Security'],
     image: '/images/project-covers/secure-reddit.jpg',
+    links: [
+      {
+        type: 'Source',
+        href: 'https://github.com/magicuidesign/magicui',
+        icon: <GitHubLogoIcon className='size-3' />,
+      },
+    ],
   },
   {
     title: 'University of St. Andrews Blockchain Society Website',
@@ -64,5 +109,12 @@ export const projectsData = [
     dates: 'Sep 2023 - Mar 2024',
     tags: ['React', 'Team Lead', 'Agile'],
     image: '/images/project-covers/ustablockchain.PNG',
+    links: [
+      {
+        type: 'Website',
+        href: 'https://ustablockchain.com/',
+        icon: <GlobeIcon className='size-3' />,
+      },
+    ],
   },
 ];
